@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
-public class RoomManager : MonoBehaviourPunCallbacks
+public class RoomManager : MonoBehaviour
 {
     public GameObject PlayerCharacter;
     public Vector3 SpawnPosition;
@@ -13,11 +12,11 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Waiting for Connect....");
 
-        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.ConnectUsingSettings();
         //Photon Server에 접속하는 함수
     }
 
-    public override void OnConnectedToMaster()
+/*    public override void OnConnectedToMaster()
     {
         base.OnConnectedToMaster();
 
@@ -39,5 +38,5 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         GameObject Client = PhotonNetwork.Instantiate(PlayerCharacter.name, SpawnPosition, Quaternion.identity);
         Client.GetComponent<PlayerSetup>().IsLocalPlayer();
-    }
+    }*/
 }

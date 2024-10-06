@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerSetup : MonoBehaviour
 {
     public Movement Playermovement;
-    public GameObject camera;
+    public GameObject Playercamera;
 
     // Start is called before the first frame update
     public void IsLocalPlayer() 
     {
         Playermovement.enabled = true;
-        camera.SetActive(true);
+        Playercamera.SetActive(true);
     }
 }

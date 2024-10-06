@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
-public class TitleRoomManager : MonoBehaviourPunCallbacks
+public class TitleRoomManager : MonoBehaviour
 {
     public GameObject PlayerCharacter;
     public GameObject SpawnPosition;
 
     // Start is called before the first frame update
-    void Start()
+/*    void Start()
     {
         Debug.Log("Waiting for Connect....");
         PhotonNetwork.ConnectUsingSettings();
@@ -28,7 +27,7 @@ public class TitleRoomManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedLobby();
 
-        //PhotonNetwork.JoinOrCreateRoom("Test", null, null);
+        PhotonNetwork.JoinOrCreateRoom("Test", null, null);
         //Lobby에 있는 방 중 특정 방으로 접속 || 없다면 생성
     }
 
@@ -39,5 +38,5 @@ public class TitleRoomManager : MonoBehaviourPunCallbacks
         Vector3 Startposition = SpawnPosition.GetComponent<Transform>().position;
         GameObject Client = PhotonNetwork.Instantiate(PlayerCharacter.name, Startposition, Quaternion.identity);
         Client.GetComponent<PlayerSetup>().IsLocalPlayer();
-    }
+    }*/
 }
