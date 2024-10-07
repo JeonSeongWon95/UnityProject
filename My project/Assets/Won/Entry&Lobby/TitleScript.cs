@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class TitleScript : MonoBehaviour
     bool ChanageStep = false;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

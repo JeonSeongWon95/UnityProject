@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class GameManagerScript : MonoBehaviour
+public class GameManagerScript : MonoBehaviourPunCallbacks
 {
     public bool IsGameEnd = false;
+    public GameObject Character;
+    public GameObject[] StartPositions;
 
     private float GameEndTimer = 0.0f;
-    // Start is called before the first frame update
+ 
     void Start()
     {
-        
+        PhotonNetwork.Instantiate("Player", StartPositions[0].transform.position, StartPositions[0].transform.rotation);
     }
 
     // Update is called once per frame
@@ -29,4 +33,6 @@ public class GameManagerScript : MonoBehaviour
             }
         }
     }
+
+
 }

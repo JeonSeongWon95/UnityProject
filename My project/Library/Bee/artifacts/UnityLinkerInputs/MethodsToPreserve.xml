@@ -1,0 +1,12 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="LoobyScript">
+			<method name="OnClickChange"/>
+			<method name="OnClickExit"/>
+			<method name="OnClickMoveLeft"/>
+			<method name="OnClickMoveRight"/>
+			<method name="OnClickOption"/>
+			<method name="OnClickPlay"/>
+		</type>
+	</assembly>
+</linker>
