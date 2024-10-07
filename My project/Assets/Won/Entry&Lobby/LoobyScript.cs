@@ -19,8 +19,8 @@ public class LoobyScript : MonoBehaviour
 
     public void OnClickPlay() 
     {
-        Debug.Log("Play Click!");
-        
+        TitleGameManager TGM = GameObject.Find("GameManager").GetComponent<TitleGameManager>();
+        TGM.NextStep();
     }
     public void OnClickChange()
     {

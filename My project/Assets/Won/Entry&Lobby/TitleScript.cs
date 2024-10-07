@@ -5,6 +5,7 @@ using UnityEngine;
 public class TitleScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    bool ChanageStep = false;
     void Start()
     {
         
@@ -13,9 +14,11 @@ public class TitleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Return)) 
+        if (Input.GetKey(KeyCode.Return) && !ChanageStep) 
         {
-            Destroy(gameObject);
+            TitleGameManager TGM = GameObject.Find("GameManager").GetComponent<TitleGameManager>();
+            TGM.NextStep();
+            ChanageStep = true;
         }
     }
 }
