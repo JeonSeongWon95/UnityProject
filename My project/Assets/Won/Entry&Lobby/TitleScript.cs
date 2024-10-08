@@ -20,6 +20,8 @@ public class TitleScript : MonoBehaviour
             TitleGameManager TGM = GameObject.Find("GameManager").GetComponent<TitleGameManager>();
             TGM.NextStep();
             ChanageStep = true;
+
+            Destroy(gameObject);
         }
     }
 }

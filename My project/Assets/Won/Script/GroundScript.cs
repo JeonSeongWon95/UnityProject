@@ -22,10 +22,10 @@ public class GroundScript : MonoBehaviour
         if (Parenttransform == null)
             return;
 
-        CameraScript PlayerScript = Parenttransform.gameObject.GetComponent<CameraScript>();
-        if (PlayerScript == null)
+        PlayerScript PlayerSc = Parenttransform.gameObject.GetComponent<PlayerScript>();
+        if (PlayerSc == null)
             return;
 
-        PlayerScript.IsJumping = false;
+        PlayerSc.IsJumping = false;
     }
 }

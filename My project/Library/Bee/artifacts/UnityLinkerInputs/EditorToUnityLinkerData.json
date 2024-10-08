@@ -23,13 +23,6 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "CameraScript",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
@@ -46,6 +39,13 @@
                 "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "EndSceneGameManager",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "",
@@ -73,7 +73,7 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Assembly-CSharp.dll",
+            "managedAssemblyName": "Assembly-CSharp",
             "nativeClass": "",
             "fullManagedTypeName": "GoalScript",
             "moduleName": "",
@@ -121,12 +121,12 @@
         {
             "managedAssemblyName": "Assembly-CSharp",
             "nativeClass": "",
-            "fullManagedTypeName": "Movement",
+            "fullManagedTypeName": "MarkerScript",
             "moduleName": "",
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Assembly-CSharp.dll",
+            "managedAssemblyName": "Assembly-CSharp",
             "nativeClass": "",
             "fullManagedTypeName": "Movement",
             "moduleName": "",
@@ -246,13 +246,6 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "PhotonUnityNetworking.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "Photon.Pun.PhotonAnimatorView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "PhotonUnityNetworking",
             "nativeClass": "",
             "fullManagedTypeName": "Photon.Pun.PhotonRigidbodyView",
@@ -260,21 +253,7 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "PhotonUnityNetworking.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "Photon.Pun.PhotonRigidbodyView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "PhotonUnityNetworking",
-            "nativeClass": "",
-            "fullManagedTypeName": "Photon.Pun.PhotonTransformView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "PhotonUnityNetworking.dll",
             "nativeClass": "",
             "fullManagedTypeName": "Photon.Pun.PhotonTransformView",
             "moduleName": "",
@@ -311,7 +290,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp",
             "nativeClass": "",
-            "fullManagedTypeName": "PlayerSetup",
+            "fullManagedTypeName": "PlayerScript",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -320,13 +299,6 @@
             "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "RoomManager",
-            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -377,8 +349,6 @@
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -462,8 +432,6 @@
             "fullManagedTypeName": "UnityEngine.AnimationClip",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -473,28 +441,6 @@
             "fullManagedTypeName": "UnityEngine.Animator",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/PlayScene.unity",
-                "Assets/Scenes/Title.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AudioBehaviour",
-            "fullManagedTypeName": "UnityEngine.AudioBehaviour",
-            "moduleName": "Audio",
-            "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/Title.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AudioListener",
-            "fullManagedTypeName": "UnityEngine.AudioListener",
-            "moduleName": "Audio",
-            "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -535,8 +481,6 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -577,7 +521,6 @@
             "fullManagedTypeName": "UnityEngine.CapsuleCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -752,8 +695,6 @@
             "fullManagedTypeName": "UnityEngine.Motion",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -839,7 +780,6 @@
             "fullManagedTypeName": "UnityEngine.Rigidbody",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -850,8 +790,6 @@
             "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -872,8 +810,6 @@
             "fullManagedTypeName": "UnityEngine.SkinnedMeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/EndScene.unity",
-                "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -949,9 +885,23 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "UnityEngine.UI",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.CanvasScaler",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.CanvasScaler",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.GraphicRaycaster",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -973,6 +923,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Image",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Outline",
             "moduleName": "",
             "usedInScenes": []
         },

@@ -24,6 +24,8 @@ public class TitleGameManager : MonoBehaviourPunCallbacks
     public GameObject LobbyUI;
     public GameObject LoadingCharacter;
     public GameObject LoadingUI;
+    public GameObject UserDataStruct;
+    public GameObject TitleImage;
 
 
     private GameObject SpawnLobbyCharacter = null;
@@ -38,7 +40,16 @@ public class TitleGameManager : MonoBehaviourPunCallbacks
     public Vector3 LoadingCharacterSpawnPosition;
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.ConnectUsingSettings();
+            Instantiate(TitleImage);
+        }
+        else 
+        {
+            gamestep = Step.Lobby;
+            PlayGameLogic();
+        }
     }
 
     public override void OnConnectedToMaster()
@@ -64,9 +75,6 @@ public class TitleGameManager : MonoBehaviourPunCallbacks
                 break;
 
             case Step.Lobby:
-                GameObject TUI = GameObject.Find("TitleUI");
-                Destroy(TUI);
-
                 JoinLobby();
                 SpawnLobbyCharacter = Instantiate(LobbyCharacter, LobbyCharacterSpawnPosition, transform.rotation);
                 SpawnLobbyUI = Instantiate(LobbyUI);
@@ -135,8 +143,6 @@ public class TitleGameManager : MonoBehaviourPunCallbacks
 
         if (GameStartTimer > 8.0f)
         {
-            Destroy(SpawnLoadingCharacter);
-            Destroy(SpawnLoadingUI);
             SceneManager.LoadScene("PlayScene");
         }
 
@@ -144,25 +150,27 @@ public class TitleGameManager : MonoBehaviourPunCallbacks
 
     private void UpdatePlayerUI()
     {
-        Text[] texts = SpawnLoadingUI.GetComponentsInChildren<Text>();
-        if (texts.Length > 0)
+        if (SpawnLoadingUI != null)
         {
-            foreach (Text text in texts)
+
+            Text[] texts = SpawnLoadingUI.GetComponentsInChildren<Text>();
+            if (texts.Length > 0)
             {
-                if (text.name == "TotalPlayerCount_Text")
+                foreach (Text text in texts)
                 {
-                    text.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
-                    break;
+                    if (text.name == "TotalPlayerCount_Text")
+                    {
+                        text.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
+                        break;
+                    }
+                }
+
+                if (MaxClientCount == PhotonNetwork.CurrentRoom.PlayerCount)
+                {
+                    NextStep();
                 }
             }
-
-            if (MaxClientCount == PhotonNetwork.CurrentRoom.PlayerCount)
-            {
-                NextStep();
-            }
         }
-
-        Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount.ToString());
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)

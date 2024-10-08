@@ -20,21 +20,21 @@ public class WallScript : MonoBehaviour
         Transform Parenttransform = collision.gameObject.transform.parent;
         if (Parenttransform == null)
             return;
-        CameraScript PlayerScript = Parenttransform.gameObject.GetComponent<CameraScript>();
-        if (PlayerScript == null)
+        PlayerScript PlayerScr = Parenttransform.gameObject.GetComponent<PlayerScript>();
+        if (PlayerScr == null)
             return;
 
-        PlayerScript.CanMove = false;
+        PlayerScr.CanMove = false;
     }
     void OnCollisionExit(Collision collision)
     {
         Transform Parenttransform = collision.gameObject.transform.parent;
         if (Parenttransform == null)
             return;
-        CameraScript PlayerScript = Parenttransform.gameObject.GetComponent<CameraScript>();
-        if (PlayerScript == null)
+        PlayerScript PlayerScr = Parenttransform.gameObject.GetComponent<PlayerScript>();
+        if (PlayerScr == null)
             return;
 
-        PlayerScript.CanMove = true;
+        PlayerScr.CanMove = true;
     }
 }
