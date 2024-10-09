@@ -1,22 +1,25 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="GetCharacterRenderScript" preserve="nothing"/>
 		<type fullname="GoalScript" preserve="nothing"/>
 		<type fullname="MarkerScript" preserve="nothing"/>
-		<type fullname="Movement" preserve="nothing"/>
 		<type fullname="PlayerScript" preserve="nothing"/>
+		<type fullname="SetNickNameScript" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="BouncepadScript" preserve="nothing"/>
 		<type fullname="BrokenWallScript" preserve="nothing"/>
 		<type fullname="EndSceneGameManager" preserve="nothing"/>
-		<type fullname="GameManagerScript" preserve="nothing"/>
+		<type fullname="GetCharacterRenderScript" preserve="nothing"/>
 		<type fullname="GroundScript" preserve="nothing"/>
 		<type fullname="HammerHitScript" preserve="nothing"/>
 		<type fullname="HammerRotation" preserve="nothing"/>
-		<type fullname="LoobyScript" preserve="nothing"/>
+		<type fullname="InvenScript" preserve="nothing"/>
+		<type fullname="LobbyUIScript" preserve="nothing"/>
 		<type fullname="ObstaclesScriipt" preserve="nothing"/>
-		<type fullname="TitleGameManager" preserve="nothing"/>
-		<type fullname="TitleScript" preserve="nothing"/>
+		<type fullname="PlaySceneGameManagerScript" preserve="nothing"/>
+		<type fullname="TitleGameManagerScript" preserve="nothing"/>
+		<type fullname="TitleUIScript" preserve="nothing"/>
 		<type fullname="WallScript" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="PhotonUnityNetworking">
@@ -115,7 +118,10 @@
 		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.GridLayoutGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.InputField" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Outline" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
 	</assembly>
 </linker>

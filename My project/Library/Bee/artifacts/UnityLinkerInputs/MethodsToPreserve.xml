@@ -1,12 +1,24 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
-		<type fullname="LoobyScript">
+		<type fullname="InvenScript">
+			<method name="OnClickedBlueSkin"/>
+			<method name="OnClickedExitButton"/>
+			<method name="OnClickedGreenSkin"/>
+			<method name="OnClickedPurpleSkin"/>
+			<method name="OnClickedRedSkin"/>
+			<method name="OnClickedWhiteSkin"/>
+			<method name="OnClickedYellowSkin"/>
+		</type>
+		<type fullname="LobbyUIScript">
 			<method name="OnClickChange"/>
 			<method name="OnClickExit"/>
 			<method name="OnClickMoveLeft"/>
 			<method name="OnClickMoveRight"/>
 			<method name="OnClickOption"/>
 			<method name="OnClickPlay"/>
+		</type>
+		<type fullname="TitleUIScript">
+			<method name="OnClickConnectButton"/>
 		</type>
 	</assembly>
 </linker>

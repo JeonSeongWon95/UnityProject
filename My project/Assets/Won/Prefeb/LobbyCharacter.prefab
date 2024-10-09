@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1667f918c066a2f46bb9f535868ab58b, type: 3}
       propertyPath: m_Name
-      value: LobbyPlayer
+      value: LobbyCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1667f918c066a2f46bb9f535868ab58b, type: 3}
       propertyPath: m_IsActive
@@ -195,6 +195,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1667f918c066a2f46bb9f535868ab58b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2956006103754394761}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1667f918c066a2f46bb9f535868ab58b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7191769258604521891}
   m_SourcePrefab: {fileID: 100100000, guid: 1667f918c066a2f46bb9f535868ab58b, type: 3}
 --- !u!4 &7343071861382164856 stripped
 Transform:
@@ -276,3 +279,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.02, z: 0.01}
   m_Center: {x: 0, y: 0.01, z: 0}
+--- !u!114 &7191769258604521891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7974753848305249218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25ee6f33b898054e8ae46e74ebe728d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Render: {fileID: 9146829157476106969}
+--- !u!137 &9146829157476106969 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2061941809787458634, guid: 1667f918c066a2f46bb9f535868ab58b, type: 3}
+  m_PrefabInstance: {fileID: 7092445447505368723}
+  m_PrefabAsset: {fileID: 0}

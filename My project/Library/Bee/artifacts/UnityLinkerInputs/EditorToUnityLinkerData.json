@@ -59,9 +59,16 @@
             ]
         },
         {
+            "managedAssemblyName": "Assembly-CSharp",
+            "nativeClass": "",
+            "fullManagedTypeName": "GetCharacterRenderScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "GameManagerScript",
+            "fullManagedTypeName": "GetCharacterRenderScript",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -101,6 +108,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "InvenScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "LevelGameManager",
             "fullManagedTypeName": "",
@@ -114,7 +128,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "LoobyScript",
+            "fullManagedTypeName": "LobbyUIScript",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -122,13 +136,6 @@
             "managedAssemblyName": "Assembly-CSharp",
             "nativeClass": "",
             "fullManagedTypeName": "MarkerScript",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp",
-            "nativeClass": "",
-            "fullManagedTypeName": "Movement",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -295,6 +302,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "PlaySceneGameManagerScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
@@ -306,6 +320,13 @@
             "nativeClass": "RuntimeInitializeOnLoadManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp",
+            "nativeClass": "",
+            "fullManagedTypeName": "SetNickNameScript",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -325,14 +346,14 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "TitleGameManager",
+            "fullManagedTypeName": "TitleGameManagerScript",
             "moduleName": "",
             "usedInScenes": []
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "TitleScript",
+            "fullManagedTypeName": "TitleUIScript",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -913,6 +934,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.GridLayoutGroup",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.UI",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Image",
@@ -927,7 +955,21 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.InputField",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.UI",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Outline",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Outline",
             "moduleName": "",

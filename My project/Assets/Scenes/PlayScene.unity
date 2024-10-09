@@ -12953,8 +12953,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821018357}
-  - component: {fileID: 1821018356}
   - component: {fileID: 1821018358}
+  - component: {fileID: 1821018359}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12962,21 +12962,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1821018356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821018355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0938f489111f963469f96f81227f22f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsGameEnd: 0
-  GoalPosition: {x: 201.97, y: 26.8, z: -0.31}
-  GameEndUI: {fileID: 151325493968380888, guid: f04f382dd77ed3c44b6579ff4958186e, type: 3}
 --- !u!4 &1821018357
 Transform:
   m_ObjectHideFlags: 0
@@ -13014,6 +12999,21 @@ MonoBehaviour:
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1821018359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821018355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0938f489111f963469f96f81227f22f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsGameEnd: 0
+  GoalPosition: {x: 201.97, y: 26.8, z: -0.31}
+  GameEndUI: {fileID: 151325493968380888, guid: f04f382dd77ed3c44b6579ff4958186e, type: 3}
 --- !u!1 &1824143038
 GameObject:
   m_ObjectHideFlags: 0

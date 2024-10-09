@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 6266470265524659857}
   - component: {fileID: 8132621435770731014}
   - component: {fileID: 1913112902351979106}
+  - component: {fileID: 7850833977810560446}
+  - component: {fileID: 1391207299994651456}
   m_Layer: 5
   m_Name: PlayerName
   m_TagString: Untagged
@@ -199,11 +201,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 495c9e2a934bcc640a8d7427b13cb680, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 6fa6b19d685ff564fb96ba7e2826ba3c, type: 3}
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -212,6 +214,36 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Player Name
+--- !u!114 &7850833977810560446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114182178734343314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1391207299994651456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114182178734343314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &182388420677727835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71aaa50f6afa9d942876dbbaaedf1625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerName: {fileID: 1913112902351979106}
+  Inventory: {fileID: 5466338000033231011, guid: 510521937e4a83349af47dead6d11bba, type: 3}
+  TitleGameManager: {fileID: 0}
 --- !u!1 &5025736599480036770
 GameObject:
   m_ObjectHideFlags: 0

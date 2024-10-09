@@ -19,14 +19,14 @@ public class PlayerScript : MonoBehaviour
     private bool IsRun;
     private Rigidbody PlayerRigidbody;
     private Animator PlayerAnimator;
-    private GameManagerScript GameManagerScr;
+    private PlaySceneGameManagerScript GameManagerScr;
 
     void Start()
     {
         Transform ChildrenTransform = transform.Find("Character");
         PlayerRigidbody = ChildrenTransform.GetComponent<Rigidbody>();
         PlayerAnimator = ChildrenTransform.GetComponent<Animator>();
-        GameManagerScr = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        GameManagerScr = GameObject.Find("GameManager").GetComponent<PlaySceneGameManagerScript>();
     }
 
     void Update()

@@ -21,7 +21,9 @@ public class GoalScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             GameObject GM = GameObject.Find("GameManager");
-            GM.GetComponent<GameManagerScript>().photonView.RPC("EndGame", Photon.Pun.RpcTarget.All);
+            PlaySceneGameManagerScript PlaySceneGameManagerScr = GM.GetComponent<PlaySceneGameManagerScript>();
+            PlaySceneGameManagerScr.photonView.RPC("EndGame", Photon.Pun.RpcTarget.All);
+            PlaySceneGameManagerScr.photonView.RPC("SetWinnerPlayer", Photon.Pun.RpcTarget.All, other.gameObject);
             Debug.Log("GameEnd Is true");
         }
     }

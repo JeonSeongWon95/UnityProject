@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
       propertyPath: m_Name
-      value: LoadingPlayer
+      value: LoadingCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
       propertyPath: m_IsActive
@@ -165,8 +165,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8188798158099713502}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 501372525740368393}
   m_SourcePrefab: {fileID: 100100000, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
+--- !u!137 &911217231790583648 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2494861316369227164, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
+  m_PrefabInstance: {fileID: 3331199280128635644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2520790700964417453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
+  m_PrefabInstance: {fileID: 3331199280128635644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &501372525740368393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520790700964417453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25ee6f33b898054e8ae46e74ebe728d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Render: {fileID: 911217231790583648}
 --- !u!4 &3004030032246461719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5a3960ea9d48564b8a2ccd3b7a768a2, type: 3}
