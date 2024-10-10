@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,12 @@ public class GoalScript : MonoBehaviour
             GameObject GM = GameObject.Find("GameManager");
             PlaySceneGameManagerScript PlaySceneGameManagerScr = GM.GetComponent<PlaySceneGameManagerScript>();
             PlaySceneGameManagerScr.photonView.RPC("EndGame", Photon.Pun.RpcTarget.All);
-            PlaySceneGameManagerScr.photonView.RPC("SetWinnerPlayer", Photon.Pun.RpcTarget.All, other.gameObject);
+
+            PhotonView WinnerPhotonView = other.gameObject.GetComponent<PhotonView>();
+            ExitGames.Client.Photon.Hashtable WinnerPlayer = new ExitGames.Client.Photon.Hashtable();
+            WinnerPlayer["IsWinner"] = true;
+            WinnerPhotonView.Owner.SetCustomProperties(WinnerPlayer);
+
             Debug.Log("GameEnd Is true");
         }
     }

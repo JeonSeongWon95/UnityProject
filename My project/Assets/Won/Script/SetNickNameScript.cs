@@ -22,14 +22,13 @@ public class SetNickNameScript : MonoBehaviourPunCallbacks
     }
 
     private eSkinColor SkinColor;
+    private bool IsWinner = false;
 
     void Start()
     {
         SetName();
         SetCharacterSkin();
     }
-
-    // Update is called once per frame
     void Update()
     {
         
@@ -82,11 +81,5 @@ public class SetNickNameScript : MonoBehaviourPunCallbacks
                 break;
 
         }
-    }
-
-    public void SetText(Text NewName) 
-    {
-        PlayerName = NewName;
-        SetName();
     }
 }

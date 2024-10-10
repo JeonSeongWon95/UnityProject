@@ -152,7 +152,6 @@ MonoBehaviour:
   LobbyUI: {fileID: 3536232229195395205, guid: f73c1c0cf3f96414193626f1ab72362d, type: 3}
   LoadingCharacter: {fileID: 2520790700964417453, guid: 6467164f72a5e7043a269e48df6ed92a, type: 3}
   LoadingUI: {fileID: 4816376330549977909, guid: ab9efb84a4c5540429d1616e33ac6798, type: 3}
-  UserDataStruct: {fileID: 5198076770742704451, guid: d0ea6ffe130eafa4880305afaf249395, type: 3}
   TitleImage: {fileID: 8622006269709688712, guid: cdc7f5f3c43e8fb43a0bb0593e588796, type: 3}
   CharacterRender: {fileID: 0}
   LobbyCharacterSpawnPosition: {x: 0, y: 4.5, z: 0}

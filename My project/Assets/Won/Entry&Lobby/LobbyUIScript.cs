@@ -10,9 +10,11 @@ public class LobbyUIScript : MonoBehaviourPunCallbacks
 {
     public Text PlayerName;
     public GameObject Inventory;
+    public GameObject OptionUI;
     public GameObject TitleGameManager;
 
     private GameObject SpawnInventory;
+    private GameObject SpawnOptionUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +34,32 @@ public class LobbyUIScript : MonoBehaviourPunCallbacks
     }
     public void OnClickChange()
     {
-        SpawnInventory = Instantiate(Inventory);
-        SpawnInventory.GetComponent<InvenScript>().GameManager = TitleGameManager;
+        if (SpawnInventory == null)
+        {
+            SpawnInventory = Instantiate(Inventory);
+            SpawnInventory.GetComponent<InvenScript>().GameManager = TitleGameManager;
+        }
+        else 
+        {
+            if (!SpawnInventory.activeSelf) 
+            {
+                SpawnInventory.SetActive(true);
+            }
+        }
     }
     public void OnClickOption()
     {
-        Debug.Log("Option Click!");
+        if (SpawnOptionUI == null)
+        {
+            SpawnOptionUI = Instantiate(OptionUI);
+        }
+        else 
+        {
+            if (!SpawnOptionUI.activeSelf)
+            {
+                SpawnOptionUI.SetActive(true);
+            }
+        }
     }
     public void OnClickMoveRight()
     {
@@ -60,8 +82,6 @@ public class LobbyUIScript : MonoBehaviourPunCallbacks
 
     public void LoadName() 
     {
-        Debug.Log("Function Start LoadName");
-        Debug.Log("PhotonNickName is " + PhotonNetwork.NickName);
         PlayerName.text = PhotonNetwork.NickName;
     }
 }

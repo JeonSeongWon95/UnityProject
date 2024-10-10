@@ -44,6 +44,6 @@ public class InvenScript : MonoBehaviour
     }
     public void OnClickedExitButton() 
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

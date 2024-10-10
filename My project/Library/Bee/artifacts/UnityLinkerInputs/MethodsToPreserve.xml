@@ -12,10 +12,14 @@
 		<type fullname="LobbyUIScript">
 			<method name="OnClickChange"/>
 			<method name="OnClickExit"/>
-			<method name="OnClickMoveLeft"/>
-			<method name="OnClickMoveRight"/>
 			<method name="OnClickOption"/>
 			<method name="OnClickPlay"/>
+		</type>
+		<type fullname="OptionScript">
+			<method name="ChangeResolution"/>
+			<method name="GetResolutionData"/>
+			<method name="OnClickExitButton"/>
+			<method name="SetIsFullScreen"/>
 		</type>
 		<type fullname="TitleUIScript">
 			<method name="OnClickConnectButton"/>

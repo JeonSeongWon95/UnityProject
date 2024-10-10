@@ -36,8 +36,7 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
     public GameObject LoadingCharacter;
     public GameObject LoadingUI;
     public GameObject TitleImage;
-    public Renderer CharacterRender;
-
+    private Renderer CharacterRender;
     private GameObject SpawnLobbyCharacter = null;
     private GameObject SpawnLobbyUI = null;
     private GameObject SpawnLoadingCharacter = null;
@@ -53,7 +52,6 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
     {
         if (!PhotonNetwork.IsConnected)
         {
-            Debug.Log("Start PhotonServer Connect");
             PhotonNetwork.ConnectUsingSettings();
             GameObject SpawnTitleImage = Instantiate(TitleImage);
             TitleUIScript TitleUIScr = SpawnTitleImage.GetComponent<TitleUIScript>();
@@ -61,10 +59,8 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
         }
         else
         {
-            Debug.Log("Already connected.");
             ExitGames.Client.Photon.Hashtable properties = PhotonNetwork.LocalPlayer.CustomProperties;
             properties.TryGetValue("Skin", out SkinColor);
-            ChangeSkin();
             gamestep = eStep.Lobby;
             PlayGameLogic();
         }
@@ -72,15 +68,12 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("Finished PhotonServer Connect");
     }
     public override void OnDisconnected(DisconnectCause cause)
     {
-        Debug.Log("Disconnected from Photon. Reason: " + cause);
     }
     void Update()
     {
-        Debug.Log("Current Network Client State: " + PhotonNetwork.NetworkClientState);
 
         if (!PhotonNetwork.IsConnected)
         {
@@ -106,6 +99,7 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
                 SpawnLobbyUI = Instantiate(LobbyUI);
 
                 SetCharacterRender(SpawnLobbyCharacter);
+                ChangeSkin();
 
                 LobbyUIScript LobbyUIScr = SpawnLobbyUI.GetComponent<LobbyUIScript>();
                 SpawnLobbyUI.GetComponent<LobbyUIScript>().TitleGameManager = gameObject;
@@ -123,6 +117,7 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
                 break;
 
             case eStep.InGame:
+                Debug.Log("InGameStep Start");
                 SaveUserData();
                 IsStartGame = true;
                 break;
@@ -215,9 +210,21 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
 
     void SaveUserData() 
     {
-        ExitGames.Client.Photon.Hashtable PlayerSkin = new ExitGames.Client.Photon.Hashtable();
-        PlayerSkin["Skin"] = (int)SkinColor;
-        PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerSkin);
+        ResetUserData();
+
+        ExitGames.Client.Photon.Hashtable customProperties = PhotonNetwork.LocalPlayer.CustomProperties;
+
+        if (customProperties.ContainsKey("Skin"))
+        {
+            customProperties["Skin"] = (int)SkinColor;
+            PhotonNetwork.LocalPlayer.SetCustomProperties(customProperties);
+        }
+        else
+        {
+            ExitGames.Client.Photon.Hashtable PlayerSkin = new ExitGames.Client.Photon.Hashtable();
+            PlayerSkin["Skin"] = (int)SkinColor;
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerSkin);
+        }
     }
 
     public void SetUserName(string NewName) 
@@ -234,10 +241,11 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
 
     private void ChangeSkin() 
     {
-        Debug.Log("Present Color is " + SkinColor);
+        Debug.Log("Chanage Color is " + SkinColor);
 
         switch (SkinColor) 
         {
+
             case eSkinColor.Red:
                 CharacterRender.material.color = Color.red;
                 break;
@@ -266,6 +274,17 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
     {
         CharacterRender = NewCharacter.GetComponent<GetCharacterRenderScript>().GetRender();
         ChangeSkin();
+    }
+
+    void ResetUserData() 
+    {
+        ExitGames.Client.Photon.Hashtable customProperties = PhotonNetwork.LocalPlayer.CustomProperties;
+
+        if (customProperties.ContainsKey("IsWinner"))
+        {
+            customProperties.Remove("IsWinner");
+            PhotonNetwork.LocalPlayer.SetCustomProperties(customProperties);
+        }
     }
 
 }

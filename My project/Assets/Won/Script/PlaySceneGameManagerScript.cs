@@ -11,10 +11,11 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     public bool IsGameEnd = false;
     public Vector3 GoalPosition;
     public GameObject GameEndUI;
-    public Renderer CharacterRender = null;
 
     private float GameEndTimer = 0.0f;
+    private float GameStartTimer = 0.0f;
     private GameObject Player;
+    private bool IsGameStart = false;
 
     void Start()
     {
@@ -23,14 +24,12 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
         PlayerScr.enabled = true;
         PlayerScr.LocalPlayerSet();
 
-        if (PhotonNetwork.IsMasterClient)
+        if (PhotonNetwork.IsMasterClient) 
         {
             PhotonNetwork.Instantiate("Goal", GoalPosition, Quaternion.identity);
         }
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (IsGameEnd) 
@@ -51,12 +50,6 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     public void EndGame() 
     {
         IsGameEnd = true;
-    }
-
-    [PunRPC]
-    public void SetWinnerPlayer(GameObject Winner)
-    {
-        
     }
 
 }

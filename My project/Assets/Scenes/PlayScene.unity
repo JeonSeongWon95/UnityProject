@@ -13008,12 +13008,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1821018355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0938f489111f963469f96f81227f22f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 41d995722e8da9b47a820abccd9027d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsGameEnd: 0
-  GoalPosition: {x: 201.97, y: 26.8, z: -0.31}
+  GoalPosition: {x: 197.50615, y: 26.8, z: 0.34282732}
   GameEndUI: {fileID: 151325493968380888, guid: f04f382dd77ed3c44b6579ff4958186e, type: 3}
+  CharacterRender: {fileID: 0}
 --- !u!1 &1824143038
 GameObject:
   m_ObjectHideFlags: 0

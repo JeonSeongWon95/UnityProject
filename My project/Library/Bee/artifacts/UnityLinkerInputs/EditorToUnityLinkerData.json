@@ -43,7 +43,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "EndSceneGameManager",
+            "fullManagedTypeName": "EndSceneGameManagerScript",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -103,7 +103,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "HammerRotation",
+            "fullManagedTypeName": "HammerRotationScript",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -183,6 +183,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "OptionScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "PhotonUnityNetworking.Demos",
             "nativeClass": "",
             "fullManagedTypeName": "Photon.Pun.Demo.Asteroids.Asteroid",
@@ -253,6 +260,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "PhotonUnityNetworking.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Photon.Pun.PhotonAnimatorView",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "PhotonUnityNetworking",
             "nativeClass": "",
             "fullManagedTypeName": "Photon.Pun.PhotonRigidbodyView",
@@ -261,6 +275,13 @@
         },
         {
             "managedAssemblyName": "PhotonUnityNetworking",
+            "nativeClass": "",
+            "fullManagedTypeName": "Photon.Pun.PhotonTransformView",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "PhotonUnityNetworking.dll",
             "nativeClass": "",
             "fullManagedTypeName": "Photon.Pun.PhotonTransformView",
             "moduleName": "",
@@ -330,6 +351,20 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp",
+            "nativeClass": "",
+            "fullManagedTypeName": "SetWinnerNickNameScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SetWinnerNickNameScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "ShaderNameRegistry",
             "fullManagedTypeName": "",
@@ -360,6 +395,13 @@
         {
             "managedAssemblyName": "Unity.TextMeshPro.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "TMPro.TextMeshProUGUI",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.TextMeshPro.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "TMPro.TMP_FontAsset",
             "moduleName": "",
             "usedInScenes": []
@@ -370,6 +412,7 @@
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -453,6 +496,7 @@
             "fullManagedTypeName": "UnityEngine.AnimationClip",
             "moduleName": "Animation",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -462,6 +506,7 @@
             "fullManagedTypeName": "UnityEngine.Animator",
             "moduleName": "Animation",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -502,6 +547,7 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -716,6 +762,7 @@
             "fullManagedTypeName": "UnityEngine.Motion",
             "moduleName": "Animation",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -801,6 +848,7 @@
             "fullManagedTypeName": "UnityEngine.Rigidbody",
             "moduleName": "Physics",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -811,6 +859,7 @@
             "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -831,6 +880,7 @@
             "fullManagedTypeName": "UnityEngine.SkinnedMeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/EndScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -920,6 +970,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Dropdown",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.UI",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.GraphicRaycaster",
@@ -962,6 +1019,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Mask",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.UI",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Outline",
@@ -972,6 +1036,20 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Outline",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Scrollbar",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.ScrollRect",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1000,6 +1078,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Text",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Toggle",
             "moduleName": "",
             "usedInScenes": []
         },
