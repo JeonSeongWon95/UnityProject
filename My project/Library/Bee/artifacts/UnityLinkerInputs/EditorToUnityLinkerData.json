@@ -135,7 +135,14 @@
         {
             "managedAssemblyName": "Assembly-CSharp",
             "nativeClass": "",
-            "fullManagedTypeName": "MarkerScript",
+            "fullManagedTypeName": "LookAtCameraScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "MoveObstacles",
             "moduleName": "",
             "usedInScenes": []
         },

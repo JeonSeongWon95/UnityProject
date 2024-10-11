@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using ExitGames.Client.Photon.StructWrapping;
+using Photon.Chat.Demo;
 
 public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
 {
     public bool IsGameEnd = false;
     public Vector3 GoalPosition;
     public GameObject GameEndUI;
+    public ChatUIScript ChatUI;
 
     private float GameEndTimer = 0.0f;
     private float GameStartTimer = 0.0f;
@@ -21,9 +23,11 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     {
         Player = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.Euler(0, 90, 0));
         PlayerScript PlayerScr = Player.GetComponent<PlayerScript>();
+        SocketScript SocketScr = Player.GetComponent<SocketScript>();
+        ChatUI.SetSocketScript(SocketScr);
+        SocketScr.SetChatUI(ChatUI);
         PlayerScr.enabled = true;
         PlayerScr.LocalPlayerSet();
-
         if (PhotonNetwork.IsMasterClient) 
         {
             PhotonNetwork.Instantiate("Goal", GoalPosition, Quaternion.identity);

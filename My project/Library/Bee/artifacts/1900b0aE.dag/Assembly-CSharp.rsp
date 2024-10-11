@@ -419,6 +419,7 @@
 "Assets/Won/Entry&Lobby/TitleUIScript.cs"
 "Assets/Won/Script/BouncepadScript.cs"
 "Assets/Won/Script/BrokenWallScript.cs"
+"Assets/Won/Script/ChatUIScript.cs"
 "Assets/Won/Script/EndSceneGameManagerScript.cs"
 "Assets/Won/Script/GetCharacterRenderScript.cs"
 "Assets/Won/Script/GoalScript.cs"
@@ -427,8 +428,8 @@
 "Assets/Won/Script/HammerRotationScript.cs"
 "Assets/Won/Script/InvenScript.cs"
 "Assets/Won/Script/LookAtCameraScript.cs"
-"Assets/Won/Script/MarkerScript.cs"
 "Assets/Won/Script/Movement.cs"
+"Assets/Won/Script/MoveObstacles.cs"
 "Assets/Won/Script/ObstaclesScript.cs"
 "Assets/Won/Script/OptionScript.cs"
 "Assets/Won/Script/PlayerScript.cs"
@@ -436,6 +437,7 @@
 "Assets/Won/Script/PlaySceneGameManagerScript.cs"
 "Assets/Won/Script/SetNickNameScript.cs"
 "Assets/Won/Script/SetWinnerNickNameScript.cs"
+"Assets/Won/Script/SocketScript.cs"
 "Assets/Won/Script/WallScript.cs"
 -langversion:9.0
 

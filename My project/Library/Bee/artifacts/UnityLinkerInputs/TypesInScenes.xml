@@ -2,7 +2,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="GetCharacterRenderScript" preserve="nothing"/>
 		<type fullname="GoalScript" preserve="nothing"/>
-		<type fullname="MarkerScript" preserve="nothing"/>
+		<type fullname="LookAtCameraScript" preserve="nothing"/>
 		<type fullname="PlayerScript" preserve="nothing"/>
 		<type fullname="SetNickNameScript" preserve="nothing"/>
 		<type fullname="SetWinnerNickNameScript" preserve="nothing"/>
@@ -17,6 +17,7 @@
 		<type fullname="HammerRotationScript" preserve="nothing"/>
 		<type fullname="InvenScript" preserve="nothing"/>
 		<type fullname="LobbyUIScript" preserve="nothing"/>
+		<type fullname="MoveObstacles" preserve="nothing"/>
 		<type fullname="ObstaclesScriipt" preserve="nothing"/>
 		<type fullname="OptionScript" preserve="nothing"/>
 		<type fullname="PlaySceneGameManagerScript" preserve="nothing"/>

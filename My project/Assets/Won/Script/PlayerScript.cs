@@ -13,6 +13,8 @@ public class PlayerScript : MonoBehaviour
     public bool IsJumping;
     public bool CanMove = true;
     public Vector3 CameraOffset;
+    public LookAtCameraScript CameraScript;
+    public Camera CharacterCamera;
 
     private Vector3 MoveVector;
     private bool IsJump;
@@ -112,5 +114,10 @@ public class PlayerScript : MonoBehaviour
         Transform PlayerMarkerTransform = PlayerTransform.Find("PlayerMarker");
         Transform PlayerArrowTransform = PlayerMarkerTransform.Find("Arrow");
         PlayerArrowTransform.gameObject.SetActive(true);
+    }
+    
+    public void SetCameraScript()
+    {
+        CameraScript.SetCamera(CharacterCamera);
     }
 }

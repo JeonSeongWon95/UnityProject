@@ -19,11 +19,9 @@ public class ObstaclesScriipt : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Transform PlayerTransform = collision.gameObject.transform;
-        //Transform ParentTransform = collision.gameObject.transform.parent;
         if (PlayerTransform == null)
             return;
         Rigidbody PlayerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-        //Rigidbody ParentRigidbody = ParentTransform.gameObject.GetComponent<Rigidbody>();
         if (PlayerRigidbody == null)
             return;
 
