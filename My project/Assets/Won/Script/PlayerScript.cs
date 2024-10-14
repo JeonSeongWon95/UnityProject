@@ -7,14 +7,15 @@ public class PlayerScript : MonoBehaviour
 {
     public Transform CharacterBody;
     public Transform CameraBody;
+    public GameObject Character;
+    public GameObject CameraArm;
+    public GameObject ArrowUI;
     public float WalkSpeed = 5.0f;
     public float RunSpeed = 10.0f;
     public float RotationSpeed = 10.0f;
     public bool IsJumping;
     public bool CanMove = true;
     public Vector3 CameraOffset;
-    public LookAtCameraScript CameraScript;
-    public Camera CharacterCamera;
 
     private Vector3 MoveVector;
     private bool IsJump;
@@ -22,17 +23,21 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody PlayerRigidbody;
     private Animator PlayerAnimator;
     private PlaySceneGameManagerScript GameManagerScr;
+    private bool IsChatActive = false;
 
     void Start()
     {
-        Transform ChildrenTransform = transform.Find("Character");
-        PlayerRigidbody = ChildrenTransform.GetComponent<Rigidbody>();
-        PlayerAnimator = ChildrenTransform.GetComponent<Animator>();
+        Transform ChildrenTransform = Character.transform;
+        PlayerRigidbody = Character.GetComponent<Rigidbody>();
+        PlayerAnimator = Character.GetComponent<Animator>();
         GameManagerScr = GameObject.Find("GameManager").GetComponent<PlaySceneGameManagerScript>();
     }
 
     void Update()
     {
+        if (IsChatActive)
+            return;
+
         if (!GameManagerScr.IsGameEnd)
         {
             LookAround();
@@ -99,25 +104,20 @@ public class PlayerScript : MonoBehaviour
 
     void SetCameraLocation() 
     {
-        Transform PlayerTransform = transform.Find("Character");
-        Transform CameraTransform = transform.Find("CameraArm");
+        Transform PlayerTransform = Character.transform;
+        Transform CameraTransform = CameraArm.transform;
 
         CameraTransform.position = PlayerTransform.position + CameraOffset;
     }
 
     public void LocalPlayerSet() 
     {
-        Transform PlayerTransform = transform.Find("Character");
-        Transform CameraTransform = transform.Find("CameraArm");
-        CameraTransform.gameObject.SetActive(true);
-
-        Transform PlayerMarkerTransform = PlayerTransform.Find("PlayerMarker");
-        Transform PlayerArrowTransform = PlayerMarkerTransform.Find("Arrow");
-        PlayerArrowTransform.gameObject.SetActive(true);
+        CameraArm.SetActive(true);
+        ArrowUI.SetActive(true);
     }
     
-    public void SetCameraScript()
+    public void SetIsChatActive(bool NewChatActive) 
     {
-        CameraScript.SetCamera(CharacterCamera);
+        IsChatActive = NewChatActive;
     }
 }

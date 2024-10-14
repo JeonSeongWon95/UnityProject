@@ -88,14 +88,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterBody: {fileID: 1698878607615044362}
   CameraBody: {fileID: 8976553719246123377}
+  Character: {fileID: 2078536276706324912}
+  CameraArm: {fileID: 671898005042207121}
+  ArrowUI: {fileID: 6415307020563961509}
   WalkSpeed: 5
   RunSpeed: 10
   RotationSpeed: 10
   IsJumping: 0
   CanMove: 1
   CameraOffset: {x: -5, y: 5, z: 0}
-  CameraScript: {fileID: 1784059339544285972}
-  CharacterCamera: {fileID: 8539757554353544471}
 --- !u!114 &3936345231109801323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +164,51 @@ MonoBehaviour:
   PV: {fileID: 3936345231109801323}
   PlayerName: {fileID: 3552833278198581487}
   CharacterRender: {fileID: 901957204388780203}
+--- !u!1 &1693065661448932010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4708988105246273932}
+  - component: {fileID: 617371729915423215}
+  m_Layer: 0
+  m_Name: PlayerMarkerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4708988105246273932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693065661448932010}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7407640592766922584}
+  m_Father: {fileID: 1698878607615044362}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617371729915423215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693065661448932010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebd482f372e35b4a8e8e4b1eb5add95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3449536787197803029
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +221,7 @@ GameObject:
   - component: {fileID: 8539757554353544471}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +415,6 @@ GameObject:
   - component: {fileID: 6846465000209892626}
   - component: {fileID: 5704687542877544842}
   - component: {fileID: 3508997836308196001}
-  - component: {fileID: 1784059339544285972}
   m_Layer: 5
   m_Name: PlayerMarker
   m_TagString: Untagged
@@ -386,16 +431,16 @@ RectTransform:
   m_GameObject: {fileID: 6130586775018164772}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.00004395167, y: 0.000043951673, z: 0.00004395167}
+  m_LocalScale: {x: 0.004395167, y: 0.0043951673, z: 0.004395167}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8533827727586428372}
   - {fileID: 5210621277893982557}
-  m_Father: {fileID: 1698878607615044362}
+  m_Father: {fileID: 4708988105246273932}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.025}
+  m_AnchoredPosition: {x: 0, y: 2.499991}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6846465000209892626
@@ -461,19 +506,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1784059339544285972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6130586775018164772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ebd482f372e35b4a8e8e4b1eb5add95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetCamera: {fileID: 0}
 --- !u!1 &6415307020563961509
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +709,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3663633299517103302, guid: a6dc591d736d5d54ab25295150b7372e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7407640592766922584}
+      addedObject: {fileID: 4708988105246273932}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4151201476262364796, guid: a6dc591d736d5d54ab25295150b7372e, type: 3}
       insertIndex: -1

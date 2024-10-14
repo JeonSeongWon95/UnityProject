@@ -10,18 +10,24 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="BouncepadScript" preserve="nothing"/>
 		<type fullname="BrokenWallScript" preserve="nothing"/>
+		<type fullname="ChatUIScript" preserve="nothing"/>
 		<type fullname="EndSceneGameManagerScript" preserve="nothing"/>
 		<type fullname="GetCharacterRenderScript" preserve="nothing"/>
+		<type fullname="GoalScript" preserve="nothing"/>
 		<type fullname="GroundScript" preserve="nothing"/>
 		<type fullname="HammerHitScript" preserve="nothing"/>
 		<type fullname="HammerRotationScript" preserve="nothing"/>
 		<type fullname="InvenScript" preserve="nothing"/>
 		<type fullname="LobbyUIScript" preserve="nothing"/>
+		<type fullname="LookAtCameraScript" preserve="nothing"/>
 		<type fullname="MoveObstacles" preserve="nothing"/>
 		<type fullname="ObstaclesScriipt" preserve="nothing"/>
 		<type fullname="OptionScript" preserve="nothing"/>
+		<type fullname="PlayerScript" preserve="nothing"/>
 		<type fullname="PlaySceneGameManagerScript" preserve="nothing"/>
+		<type fullname="SetNickNameScript" preserve="nothing"/>
 		<type fullname="SetWinnerNickNameScript" preserve="nothing"/>
+		<type fullname="SocketScript" preserve="nothing"/>
 		<type fullname="TitleGameManagerScript" preserve="nothing"/>
 		<type fullname="TitleUIScript" preserve="nothing"/>
 		<type fullname="WallScript" preserve="nothing"/>
@@ -46,6 +52,7 @@
 	</assembly>
 	<assembly fullname="PhotonUnityNetworking">
 		<type fullname="Photon.Pun.PhotonAnimatorView" preserve="nothing"/>
+		<type fullname="Photon.Pun.PhotonRigidbodyView" preserve="nothing"/>
 		<type fullname="Photon.Pun.PhotonTransformView" preserve="nothing"/>
 		<type fullname="Photon.Pun.PhotonView" preserve="nothing"/>
 		<type fullname="Photon.Pun.ServerSettings" preserve="nothing"/>
@@ -124,6 +131,7 @@
 		<type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.ContentSizeFitter" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Dropdown" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GridLayoutGroup" preserve="nothing"/>
@@ -135,5 +143,6 @@
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Toggle" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="nothing"/>
 	</assembly>
 </linker>

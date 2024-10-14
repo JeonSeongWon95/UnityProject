@@ -11,16 +11,28 @@ public class SocketScript : MonoBehaviour
     public ChatUIScript ChatUIScr;
     private TcpClient client;
     private NetworkStream stream;
+    private bool isConnected = false;
+
     void Start()
     {
         if (ConnectServer())
         {
             Debug.Log("Connect Chat Server");
+            isConnected = true;
             ReceiveMassage();
         }
     }
     void Update()
     {
+        if (!isConnected)
+        {
+            if (ConnectServer())
+            {
+                Debug.Log("Connected to chat server.");
+                isConnected = true;
+                ReceiveMassage();
+            }
+        }
 
     }
 
@@ -30,8 +42,6 @@ public class SocketScript : MonoBehaviour
         string host = "127.0.0.1";
 
         client = new TcpClient(host, port);
-        Socket socket = client.Client;
-        socket.Blocking = false;
         stream = client.GetStream();
 
         if (stream == null)
@@ -42,10 +52,14 @@ public class SocketScript : MonoBehaviour
         return true;
     }
 
-    public async void SendMassage(string Massage)
+    public void SendMassageToServer(string ChatMessage)
     {
-        byte[] dataToSend = Encoding.ASCII.GetBytes(Massage);
-        await stream.WriteAsync(dataToSend, 0, dataToSend.Length);
+        if (ChatMessage == "")
+            return;
+
+        Debug.Log("Send Massage To Server");
+        byte[] dataToSend = Encoding.ASCII.GetBytes(ChatMessage);
+        stream.WriteAsync(dataToSend, 0, dataToSend.Length);
     }
     private async void ReceiveMassage()
     {
@@ -55,22 +69,21 @@ public class SocketScript : MonoBehaviour
         {
             int RecvCount = await stream.ReadAsync(Buffer, 0, Buffer.Length);
 
-
             if (RecvCount > 0)
             {
                 string Message = Encoding.ASCII.GetString(Buffer, 0, RecvCount);
                 string NickName = "";
                 string text = "";
 
-                for (int i = 0; i< Message.Length; ++i) 
+                for (int i = 0; i < Message.Length; ++i) 
                 {
                     if(Message[i] == '9' && Message[i+1] == '5' && Message[i+2] == '0') 
                     {
-                        for(int j = 0; j < Message[i - 1]; ++j) 
+                        for(int j = 0; j < i; ++j) 
                         {
                             NickName += Message[j];
                         }
-                        for(int k = i + 2; k < Message.Length; ++k) 
+                        for(int k = i + 3; k < Message.Length; ++k) 
                         {
                             text += Message[k];
                         }

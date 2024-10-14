@@ -254,8 +254,7 @@
         244,
         245,
         246,
-        247,
-        248
+        247
       ],
       "DebugActionIndex": 0
     },
@@ -5177,27 +5176,6 @@
       "DebugActionIndex": 132
     },
     {
-      "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/Photon3Unity3D.pdb",
-      "DisplayName": "Copying Photon3Unity3D.pdb",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Photon3Unity3D.pdb"
-      ],
-      "InputFlags": [
-        0
-      ],
-      "Outputs": [
-        "M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/Photon3Unity3D.pdb"
-      ],
-      "OutputFlags": [
-        2
-      ],
-      "ToBuildDependencies": [
-        21
-      ],
-      "DebugActionIndex": 133
-    },
-    {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/PhotonChat.pdb",
       "DisplayName": "Copying PhotonChat.pdb",
       "ActionType": "CopyFiles",
@@ -5216,7 +5194,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/PhotonRealtime.pdb",
@@ -5237,7 +5215,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/PhotonUnityNetworking.Demos.pdb",
@@ -5258,7 +5236,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/PhotonUnityNetworking.pdb",
@@ -5279,7 +5257,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/PhotonUnityNetworking.Utilities.pdb",
@@ -5300,7 +5278,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/Unity.TextMeshPro.pdb",
@@ -5321,7 +5299,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/Unity.Timeline.pdb",
@@ -5342,7 +5320,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/Unity.VisualScripting.Core.pdb",
@@ -5363,7 +5341,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/Unity.VisualScripting.Flow.pdb",
@@ -5384,7 +5362,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/Unity.VisualScripting.State.pdb",
@@ -5405,7 +5383,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.AccessibilityModule.pdb",
@@ -5426,7 +5404,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 144
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.AIModule.pdb",
@@ -5447,7 +5425,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.AndroidJNIModule.pdb",
@@ -5468,7 +5446,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.AnimationModule.pdb",
@@ -5489,7 +5467,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ARModule.pdb",
@@ -5510,7 +5488,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.AssetBundleModule.pdb",
@@ -5531,7 +5509,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.AudioModule.pdb",
@@ -5552,7 +5530,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 150
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ClothModule.pdb",
@@ -5573,7 +5551,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 151
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ClusterInputModule.pdb",
@@ -5594,7 +5572,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 152
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ClusterRendererModule.pdb",
@@ -5615,7 +5593,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 153
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.CommandStateObserverModule.pdb",
@@ -5636,7 +5614,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 154
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ContentLoadModule.pdb",
@@ -5657,7 +5635,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 155
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.CoreModule.pdb",
@@ -5678,7 +5656,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 156
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.CrashReportingModule.pdb",
@@ -5699,7 +5677,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 157
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.DirectorModule.pdb",
@@ -5720,7 +5698,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 158
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.DSPGraphModule.pdb",
@@ -5741,7 +5719,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 159
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.GameCenterModule.pdb",
@@ -5762,7 +5740,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 160
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.GIModule.pdb",
@@ -5783,7 +5761,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 161
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.GraphToolsFoundationModule.pdb",
@@ -5804,7 +5782,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 162
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.GridModule.pdb",
@@ -5825,7 +5803,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 163
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.HierarchyCoreModule.pdb",
@@ -5846,7 +5824,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 164
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.HotReloadModule.pdb",
@@ -5867,7 +5845,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ImageConversionModule.pdb",
@@ -5888,7 +5866,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 166
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.IMGUIModule.pdb",
@@ -5909,7 +5887,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 167
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.InputForUIModule.pdb",
@@ -5930,7 +5908,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 168
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.InputLegacyModule.pdb",
@@ -5951,7 +5929,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 169
+      "DebugActionIndex": 168
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.InputModule.pdb",
@@ -5972,7 +5950,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 170
+      "DebugActionIndex": 169
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.JSONSerializeModule.pdb",
@@ -5993,7 +5971,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 171
+      "DebugActionIndex": 170
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.LocalizationModule.pdb",
@@ -6014,7 +5992,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 172
+      "DebugActionIndex": 171
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.MarshallingModule.pdb",
@@ -6035,7 +6013,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 173
+      "DebugActionIndex": 172
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.MultiplayerModule.pdb",
@@ -6056,7 +6034,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 174
+      "DebugActionIndex": 173
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.NVIDIAModule.pdb",
@@ -6077,7 +6055,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 175
+      "DebugActionIndex": 174
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ParticleSystemModule.pdb",
@@ -6098,7 +6076,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 176
+      "DebugActionIndex": 175
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.pdb",
@@ -6119,7 +6097,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 177
+      "DebugActionIndex": 176
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.PerformanceReportingModule.pdb",
@@ -6140,7 +6118,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 178
+      "DebugActionIndex": 177
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.Physics2DModule.pdb",
@@ -6161,7 +6139,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 179
+      "DebugActionIndex": 178
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.PhysicsModule.pdb",
@@ -6182,7 +6160,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 180
+      "DebugActionIndex": 179
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ProfilerModule.pdb",
@@ -6203,7 +6181,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 181
+      "DebugActionIndex": 180
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.PropertiesModule.pdb",
@@ -6224,7 +6202,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 182
+      "DebugActionIndex": 181
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb",
@@ -6245,7 +6223,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 183
+      "DebugActionIndex": 182
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.ScreenCaptureModule.pdb",
@@ -6266,7 +6244,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 184
+      "DebugActionIndex": 183
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.SharedInternalsModule.pdb",
@@ -6287,7 +6265,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 185
+      "DebugActionIndex": 184
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.SpriteMaskModule.pdb",
@@ -6308,7 +6286,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 186
+      "DebugActionIndex": 185
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.SpriteShapeModule.pdb",
@@ -6329,7 +6307,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 187
+      "DebugActionIndex": 186
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.StreamingModule.pdb",
@@ -6350,7 +6328,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 188
+      "DebugActionIndex": 187
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.SubstanceModule.pdb",
@@ -6371,7 +6349,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 189
+      "DebugActionIndex": 188
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.SubsystemsModule.pdb",
@@ -6392,7 +6370,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 190
+      "DebugActionIndex": 189
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.TerrainModule.pdb",
@@ -6413,7 +6391,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 191
+      "DebugActionIndex": 190
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb",
@@ -6434,7 +6412,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 192
+      "DebugActionIndex": 191
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb",
@@ -6455,7 +6433,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 193
+      "DebugActionIndex": 192
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb",
@@ -6476,7 +6454,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 194
+      "DebugActionIndex": 193
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.TextRenderingModule.pdb",
@@ -6497,7 +6475,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 195
+      "DebugActionIndex": 194
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.TilemapModule.pdb",
@@ -6518,7 +6496,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 196
+      "DebugActionIndex": 195
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.TLSModule.pdb",
@@ -6539,7 +6517,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 197
+      "DebugActionIndex": 196
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UI.pdb",
@@ -6560,7 +6538,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 198
+      "DebugActionIndex": 197
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UIElementsModule.pdb",
@@ -6581,7 +6559,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 199
+      "DebugActionIndex": 198
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UIModule.pdb",
@@ -6602,7 +6580,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 200
+      "DebugActionIndex": 199
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UmbraModule.pdb",
@@ -6623,7 +6601,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 201
+      "DebugActionIndex": 200
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb",
@@ -6644,7 +6622,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 202
+      "DebugActionIndex": 201
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb",
@@ -6665,7 +6643,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 203
+      "DebugActionIndex": 202
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityConnectModule.pdb",
@@ -6686,7 +6664,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 204
+      "DebugActionIndex": 203
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityCurlModule.pdb",
@@ -6707,7 +6685,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 205
+      "DebugActionIndex": 204
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb",
@@ -6728,7 +6706,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 206
+      "DebugActionIndex": 205
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb",
@@ -6749,7 +6727,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 207
+      "DebugActionIndex": 206
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb",
@@ -6770,7 +6748,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 208
+      "DebugActionIndex": 207
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityWebRequestModule.pdb",
@@ -6791,7 +6769,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 209
+      "DebugActionIndex": 208
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb",
@@ -6812,7 +6790,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 210
+      "DebugActionIndex": 209
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb",
@@ -6833,7 +6811,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 211
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.VehiclesModule.pdb",
@@ -6854,7 +6832,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 212
+      "DebugActionIndex": 211
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.VFXModule.pdb",
@@ -6875,7 +6853,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 213
+      "DebugActionIndex": 212
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.VideoModule.pdb",
@@ -6896,7 +6874,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 214
+      "DebugActionIndex": 213
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.VirtualTexturingModule.pdb",
@@ -6917,7 +6895,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 215
+      "DebugActionIndex": 214
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.VRModule.pdb",
@@ -6938,7 +6916,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 216
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.WindModule.pdb",
@@ -6959,7 +6937,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 217
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Managed/UnityEngine.XRModule.pdb",
@@ -6980,7 +6958,7 @@
       "ToBuildDependencies": [
         21
       ],
-      "DebugActionIndex": 218
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
@@ -6997,7 +6975,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 219
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/app.info",
@@ -7016,9 +6994,9 @@
         2
       ],
       "ToBuildDependencies": [
-        219
+        218
       ],
-      "DebugActionIndex": 220
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project_Data/Resources/unity default resources",
@@ -7036,7 +7014,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 221
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/My project.exe",
@@ -7054,7 +7032,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 222
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -7072,7 +7050,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 223
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -7090,7 +7068,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 224
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -7108,7 +7086,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 225
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -7126,7 +7104,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 226
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -7144,7 +7122,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 227
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -7162,7 +7140,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 228
+      "DebugActionIndex": 227
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -7180,7 +7158,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 229
+      "DebugActionIndex": 228
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -7198,7 +7176,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 230
+      "DebugActionIndex": 229
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -7216,7 +7194,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 231
+      "DebugActionIndex": 230
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -7234,7 +7212,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 232
+      "DebugActionIndex": 231
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -7252,7 +7230,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 233
+      "DebugActionIndex": 232
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -7270,7 +7248,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 234
+      "DebugActionIndex": 233
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -7288,7 +7266,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 235
+      "DebugActionIndex": 234
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -7306,7 +7284,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 236
+      "DebugActionIndex": 235
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -7324,7 +7302,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 237
+      "DebugActionIndex": 236
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -7342,7 +7320,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 238
+      "DebugActionIndex": 237
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -7360,7 +7338,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 239
+      "DebugActionIndex": 238
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -7378,7 +7356,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 240
+      "DebugActionIndex": 239
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/config",
@@ -7396,7 +7374,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 241
+      "DebugActionIndex": 240
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -7414,7 +7392,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 242
+      "DebugActionIndex": 241
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/UnityCrashHandler64.exe",
@@ -7432,7 +7410,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 243
+      "DebugActionIndex": 242
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/UnityPlayer.dll",
@@ -7450,7 +7428,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 244
+      "DebugActionIndex": 243
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/WinPixEventRuntime.dll",
@@ -7468,7 +7446,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 245
+      "DebugActionIndex": 244
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/D3D12/D3D12Core.dll",
@@ -7486,7 +7464,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 246
+      "DebugActionIndex": 245
     },
     {
       "Annotation": "CopyFiles M:/Game/Unity/Fallguys/Bulid/D3D12/d3d12SDKLayers.dll",
@@ -7504,7 +7482,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 247
+      "DebugActionIndex": 246
     },
     {
       "Annotation": "Player",
@@ -7727,7 +7705,7 @@
         215,
         216,
         217,
-        218,
+        219,
         220,
         221,
         222,
@@ -7754,10 +7732,9 @@
         243,
         244,
         245,
-        246,
-        247
+        246
       ],
-      "DebugActionIndex": 248
+      "DebugActionIndex": 247
     }
   ],
   "FileSignatures": [
@@ -7974,7 +7951,7 @@
   ],
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 248
+          "Player": 247
         }
 ,  "DefaultNodes": [
     0

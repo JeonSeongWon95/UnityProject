@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 public class LookAtCameraScript : MonoBehaviour
 {
-    public Camera TargetCamera;
     void Start()
     {
         
@@ -13,14 +12,10 @@ public class LookAtCameraScript : MonoBehaviour
 
     void Update()
     {
-        if (TargetCamera != null)
+        if (Camera.main == null)
         {
-            transform.LookAt(TargetCamera.transform);
+            Debug.Log("Main Camera is Null");
         }
-    }
-
-    public void SetCamera(Camera Newcamera) 
-    {
-        TargetCamera = Newcamera;
+        transform.LookAt(Camera.main.transform);
     }
 }

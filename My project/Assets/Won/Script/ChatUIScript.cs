@@ -6,13 +6,16 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using Unity.VisualScripting;
+using NUnit.Framework;
+using System;
 
 public class ChatUIScript : MonoBehaviourPunCallbacks
 {
-    public InputField inputField;
+    public InputField InputField_Message;
     public GameObject ChatBox;
     public GameObject TextBox;
-    public SocketScript socketScript;
+    private SocketScript socketScr;
+    private PlayerScript PlayerScr;
     private bool IsActiveChat = false;
 
     void Start()
@@ -21,14 +24,20 @@ public class ChatUIScript : MonoBehaviourPunCallbacks
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
+            Debug.Log("Press Enter Key");
+
             if (!IsActiveChat)
             {
+                PlayerScr.SetIsChatActive(true);
+                Debug.Log("Is Active Chat False");
                 InputMessage();
             }
             else
             {
+                PlayerScr.SetIsChatActive(false);
+                Debug.Log("Is Active Chat true");
                 SendMessage();
             }
         }
@@ -36,20 +45,24 @@ public class ChatUIScript : MonoBehaviourPunCallbacks
 
     void SendMessage()
     {
+        Debug.Log("Send Message Active");
         string Message = PhotonNetwork.NickName;
         Message += "950";
-        Message += inputField.text;
-        socketScript.SendMessage(Message);
+        Message += InputField_Message.text;
+        socketScr.SendMassageToServer(Message);
         IsActiveChat = false;
-        inputField.DeactivateInputField();
+        InputField_Message.text = "";
+        InputField_Message.DeactivateInputField();
     }
     void InputMessage()
     {
-        inputField.ActivateInputField();
+        Debug.Log("Input Message Active");
+        InputField_Message.ActivateInputField();
         IsActiveChat = true;
     }
     public void AddText(string Nickname, string Massge)
     {
+        Debug.Log("Add Message Active");
         GameObject CreateTextBox = Instantiate(TextBox);
         Text FindTextBox =  CreateTextBox.GetComponent<Text>();
         FindTextBox.text = Nickname + " : " + Massge;
@@ -57,6 +70,11 @@ public class ChatUIScript : MonoBehaviourPunCallbacks
     }
     public void SetSocketScript(SocketScript NewsocketScript) 
     {
-        socketScript = NewsocketScript;
+        socketScr = NewsocketScript;
+    }
+
+    public void SetPlayerScript(PlayerScript NewplayerScript)
+    {
+        PlayerScr = NewplayerScript;
     }
 }

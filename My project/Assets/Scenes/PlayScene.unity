@@ -13586,6 +13586,7 @@ GameObject:
   - component: {fileID: 1821018357}
   - component: {fileID: 1821018358}
   - component: {fileID: 1821018359}
+  - component: {fileID: 1821018360}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13645,7 +13646,21 @@ MonoBehaviour:
   IsGameEnd: 0
   GoalPosition: {x: 197.50615, y: 26.8, z: 0.34282732}
   GameEndUI: {fileID: 151325493968380888, guid: f04f382dd77ed3c44b6579ff4958186e, type: 3}
-  ChatUI: {fileID: 0}
+  ChatUI: {fileID: 436507321192088763, guid: 641b22f017445dc479031e8d7e289b93, type: 3}
+  SocketScr: {fileID: 1821018360}
+--- !u!114 &1821018360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821018355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ef184081841f643a0b7fb0ed33d274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChatUIScr: {fileID: 0}
 --- !u!1 &1824143038
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,23 +12,28 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     public bool IsGameEnd = false;
     public Vector3 GoalPosition;
     public GameObject GameEndUI;
-    public ChatUIScript ChatUI;
+    public GameObject ChatUI;
+    public SocketScript SocketScr;
 
     private float GameEndTimer = 0.0f;
     private float GameStartTimer = 0.0f;
     private GameObject Player;
     private bool IsGameStart = false;
-
+    private GameObject SpawnChatUI;
+    private ChatUIScript ChatUIScr;
     void Start()
     {
         Player = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.Euler(0, 90, 0));
+        SpawnChatUI = Instantiate(ChatUI);
         PlayerScript PlayerScr = Player.GetComponent<PlayerScript>();
-        SocketScript SocketScr = Player.GetComponent<SocketScript>();
-        ChatUI.SetSocketScript(SocketScr);
-        SocketScr.SetChatUI(ChatUI);
+        ChatUIScr = SpawnChatUI.GetComponent<ChatUIScript>();
+        ChatUIScr.SetSocketScript(SocketScr);
+        ChatUIScr.SetPlayerScript(PlayerScr);
+        SocketScr.SetChatUI(ChatUIScr);
         PlayerScr.enabled = true;
         PlayerScr.LocalPlayerSet();
-        if (PhotonNetwork.IsMasterClient) 
+
+        if (PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.Instantiate("Goal", GoalPosition, Quaternion.identity);
         }
@@ -36,12 +41,12 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     }
     void Update()
     {
-        if (IsGameEnd) 
+        if (IsGameEnd)
         {
             GameEndTimer += Time.deltaTime;
             Instantiate(GameEndUI);
 
-            if (GameEndTimer > 5.0f) 
+            if (GameEndTimer > 5.0f)
             {
                 Debug.Log("GameEnd");
                 GameEndTimer = 0.0f;
@@ -51,7 +56,7 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void EndGame() 
+    public void EndGame()
     {
         IsGameEnd = true;
     }
