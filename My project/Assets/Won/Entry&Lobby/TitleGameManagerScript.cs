@@ -41,7 +41,7 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
     private GameObject SpawnLobbyUI = null;
     private GameObject SpawnLoadingCharacter = null;
     private GameObject SpawnLoadingUI = null;
-    private int MaxClientCount = 2;
+    private int MaxClientCount = 3;
     private float GameStartTimer = 0.0f;
     private bool IsStartGame = false;
     private string UserName;

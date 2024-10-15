@@ -19,7 +19,7 @@ public class SocketScript : MonoBehaviour
         {
             Debug.Log("Connect Chat Server");
             isConnected = true;
-            ReceiveMassage();
+            ReceiveMessage();
         }
     }
     void Update()
@@ -30,7 +30,7 @@ public class SocketScript : MonoBehaviour
             {
                 Debug.Log("Connected to chat server.");
                 isConnected = true;
-                ReceiveMassage();
+                ReceiveMessage();
             }
         }
 
@@ -52,16 +52,24 @@ public class SocketScript : MonoBehaviour
         return true;
     }
 
-    public void SendMassageToServer(string ChatMessage)
+    public async void SendMessageToServer(string ChatMessage)
     {
         if (ChatMessage == "")
             return;
 
-        Debug.Log("Send Massage To Server");
         byte[] dataToSend = Encoding.ASCII.GetBytes(ChatMessage);
-        stream.WriteAsync(dataToSend, 0, dataToSend.Length);
+
+        try
+        {
+            await stream.WriteAsync(dataToSend, 0, dataToSend.Length);
+            Debug.Log("Message sent successfully.");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error sending message: {ex.Message}");
+        }
     }
-    private async void ReceiveMassage()
+    private async void ReceiveMessage()
     {
         byte[] Buffer = new byte[1024];
 

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Photon.Pun;
 using Photon.Realtime;
 using Unity.VisualScripting;
 using NUnit.Framework;
@@ -49,7 +48,7 @@ public class ChatUIScript : MonoBehaviourPunCallbacks
         string Message = PhotonNetwork.NickName;
         Message += "950";
         Message += InputField_Message.text;
-        socketScr.SendMassageToServer(Message);
+        socketScr.SendMessageToServer(Message);
         IsActiveChat = false;
         InputField_Message.text = "";
         InputField_Message.DeactivateInputField();

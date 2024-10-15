@@ -30,6 +30,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "CountDownScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
@@ -96,13 +103,6 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "GoalScript",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "GroundScript",
             "moduleName": "",
             "usedInScenes": []
@@ -148,13 +148,6 @@
         },
         {
             "managedAssemblyName": "Assembly-CSharp",
-            "nativeClass": "",
-            "fullManagedTypeName": "LookAtCameraScript",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "LookAtCameraScript",
             "moduleName": "",
@@ -302,13 +295,6 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "PhotonUnityNetworking.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "Photon.Pun.PhotonRigidbodyView",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "PhotonUnityNetworking",
             "nativeClass": "",
             "fullManagedTypeName": "Photon.Pun.PhotonTransformView",
@@ -352,13 +338,6 @@
         },
         {
             "managedAssemblyName": "Assembly-CSharp",
-            "nativeClass": "",
-            "fullManagedTypeName": "PlayerScript",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "PlayerScript",
             "moduleName": "",
@@ -387,13 +366,6 @@
         },
         {
             "managedAssemblyName": "Assembly-CSharp",
-            "nativeClass": "",
-            "fullManagedTypeName": "SetNickNameScript",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "SetNickNameScript",
             "moduleName": "",
@@ -992,6 +964,13 @@
                 "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.TimelineAsset",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",

@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour
         if (IsChatActive)
             return;
 
-        if (!GameManagerScr.IsGameEnd)
+        if (!GameManagerScr.IsGameEnd && GameManagerScr.GetIsGameStart())
         {
             LookAround();
             Move();

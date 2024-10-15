@@ -22,7 +22,6 @@ public class SetNickNameScript : MonoBehaviourPunCallbacks
     }
 
     private eSkinColor SkinColor;
-    private bool IsWinner = false;
 
     void Start()
     {

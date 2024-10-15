@@ -11,21 +11,18 @@
 		<type fullname="BouncepadScript" preserve="nothing"/>
 		<type fullname="BrokenWallScript" preserve="nothing"/>
 		<type fullname="ChatUIScript" preserve="nothing"/>
+		<type fullname="CountDownScript" preserve="nothing"/>
 		<type fullname="EndSceneGameManagerScript" preserve="nothing"/>
 		<type fullname="GetCharacterRenderScript" preserve="nothing"/>
-		<type fullname="GoalScript" preserve="nothing"/>
 		<type fullname="GroundScript" preserve="nothing"/>
 		<type fullname="HammerHitScript" preserve="nothing"/>
 		<type fullname="HammerRotationScript" preserve="nothing"/>
 		<type fullname="InvenScript" preserve="nothing"/>
 		<type fullname="LobbyUIScript" preserve="nothing"/>
-		<type fullname="LookAtCameraScript" preserve="nothing"/>
 		<type fullname="MoveObstacles" preserve="nothing"/>
 		<type fullname="ObstaclesScriipt" preserve="nothing"/>
 		<type fullname="OptionScript" preserve="nothing"/>
-		<type fullname="PlayerScript" preserve="nothing"/>
 		<type fullname="PlaySceneGameManagerScript" preserve="nothing"/>
-		<type fullname="SetNickNameScript" preserve="nothing"/>
 		<type fullname="SetWinnerNickNameScript" preserve="nothing"/>
 		<type fullname="SocketScript" preserve="nothing"/>
 		<type fullname="TitleGameManagerScript" preserve="nothing"/>
@@ -52,7 +49,6 @@
 	</assembly>
 	<assembly fullname="PhotonUnityNetworking">
 		<type fullname="Photon.Pun.PhotonAnimatorView" preserve="nothing"/>
-		<type fullname="Photon.Pun.PhotonRigidbodyView" preserve="nothing"/>
 		<type fullname="Photon.Pun.PhotonTransformView" preserve="nothing"/>
 		<type fullname="Photon.Pun.PhotonView" preserve="nothing"/>
 		<type fullname="Photon.Pun.ServerSettings" preserve="nothing"/>
@@ -60,6 +56,9 @@
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.Timeline">
+		<type fullname="UnityEngine.Timeline.TimelineAsset" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine">
 		<type fullname="UnityEditor.Animations.AnimatorController" preserve="nothing"/>

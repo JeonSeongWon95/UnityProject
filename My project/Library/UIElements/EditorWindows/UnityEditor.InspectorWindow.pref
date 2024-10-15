@@ -17,7 +17,9 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-ObservedComponents__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-RpcMonoBehaviours__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-StartPositions__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-SpawnPosition__UnityEngine.UIElements.ListView
   m_Values:
+  - '{}'
   - '{}'
   - '{}'
   - '{}'
