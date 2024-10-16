@@ -39,19 +39,21 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     }
     void Update()
     {
-        if (IsGameStart == false && PhotonNetwork.IsMasterClient)
+        if (IsGameStart == false)
         {
-            GameStartTimer += Time.deltaTime;
-
-            if (GameStartTimer >= 1.0f)
+            if (PhotonNetwork.IsMasterClient)
             {
-                photonView.RPC("CountDown", Photon.Pun.RpcTarget.All);
+                GameStartTimer += Time.deltaTime;
 
-                if (Count == 0)
+                if (GameStartTimer >= 1.0f)
                 {
-                    CountDownUIScr.gameObject.SetActive(false);
+                    photonView.RPC("CountDown", Photon.Pun.RpcTarget.All);
+                    GameStartTimer = 0;
                 }
-                GameStartTimer = 0;
+            }
+            if (Count == 0)
+            {
+                photonView.RPC("GameStart", Photon.Pun.RpcTarget.All);
             }
         }
 
@@ -88,6 +90,12 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
         }
     }
 
+    [PunRPC]
+    public void GameStart() 
+    {
+        CountDownUIScr.gameObject.SetActive(false);
+    }
+
     void SpawnAndSetLocalPlayer() 
     {
         Transform SpawnTransform = SpawnPosition[UnityEngine.Random.Range(0, SpawnPosition.Length)];
@@ -106,5 +114,7 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     {
         return IsGameStart;
     }
+
+    
 
 }

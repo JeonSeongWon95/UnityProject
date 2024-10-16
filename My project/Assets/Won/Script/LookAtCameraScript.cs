@@ -16,6 +16,9 @@ public class LookAtCameraScript : MonoBehaviour
         {
             Debug.Log("Main Camera is Null");
         }
-        transform.LookAt(Camera.main.transform);
+
+        Vector3 Location = Camera.main.transform.position;
+        Location.x *= -1;
+        transform.LookAt(Location);
     }
 }

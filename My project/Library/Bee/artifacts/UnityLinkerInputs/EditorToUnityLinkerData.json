@@ -156,6 +156,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "LookAtCameraScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "MoveObstacles",
             "moduleName": "",
             "usedInScenes": []
@@ -295,6 +302,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "PhotonUnityNetworking.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Photon.Pun.PhotonRigidbodyView",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "PhotonUnityNetworking",
             "nativeClass": "",
             "fullManagedTypeName": "Photon.Pun.PhotonTransformView",
@@ -346,6 +360,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "PlayerScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "PlaySceneGameManagerScript",
             "moduleName": "",
             "usedInScenes": []
@@ -366,6 +387,13 @@
         },
         {
             "managedAssemblyName": "Assembly-CSharp",
+            "nativeClass": "",
+            "fullManagedTypeName": "SetNickNameScript",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "SetNickNameScript",
             "moduleName": "",
@@ -964,13 +992,6 @@
                 "Assets/Scenes/PlayScene.unity",
                 "Assets/Scenes/Title.unity"
             ]
-        },
-        {
-            "managedAssemblyName": "Unity.Timeline.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Timeline.TimelineAsset",
-            "moduleName": "",
-            "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",

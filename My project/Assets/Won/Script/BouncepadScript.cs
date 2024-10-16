@@ -24,7 +24,7 @@ public class BouncepadScript : MonoBehaviour
             if (PlayerRigidbody == null)
                 return;
 
-            PlayerRigidbody.AddForce(Vector3.up * 20.0f, ForceMode.Impulse);
+            PlayerRigidbody.AddForce(Vector3.up * 40.0f, ForceMode.Impulse);
         }
     }
 

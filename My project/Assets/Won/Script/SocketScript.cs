@@ -113,4 +113,14 @@ public class SocketScript : MonoBehaviour
     {
         ChatUIScr = NewChatUI;
     }
+
+    public void OnDisconnectedToChatServer()
+    {
+        client.Close();
+    }
+
+    public bool IsConnected()
+    {
+        return client.Connected;
+    }
 }
