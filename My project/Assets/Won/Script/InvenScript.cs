@@ -4,19 +4,7 @@ using UnityEngine;
 
 public class InvenScript : MonoBehaviour
 {
-    public GameObject GameManager;
-
-    private TitleGameManagerScript TitleGameManagerScr;
-    void Start()
-    {
-        TitleGameManagerScr = GameManager.GetComponent<TitleGameManagerScript>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public TitleGameManagerScript TitleGameManagerScr;
 
     public void OnClickedRedSkin()
     {

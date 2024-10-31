@@ -13,20 +13,6 @@ public class LobbyUIScript : MonoBehaviourPunCallbacks
     public GameObject OptionUI;
     public GameObject TitleGameManager;
 
-    private GameObject SpawnInventory;
-    private GameObject SpawnOptionUI;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnClickPlay() 
     {
         TitleGameManagerScript TGM = GameObject.Find("GameManager").GetComponent<TitleGameManagerScript>();
@@ -34,40 +20,17 @@ public class LobbyUIScript : MonoBehaviourPunCallbacks
     }
     public void OnClickChange()
     {
-        if (SpawnInventory == null)
+        if (!Inventory.activeSelf)
         {
-            SpawnInventory = Instantiate(Inventory);
-            SpawnInventory.GetComponent<InvenScript>().GameManager = TitleGameManager;
-        }
-        else 
-        {
-            if (!SpawnInventory.activeSelf) 
-            {
-                SpawnInventory.SetActive(true);
-            }
+            Inventory.SetActive(true);
         }
     }
     public void OnClickOption()
     {
-        if (SpawnOptionUI == null)
+        if (!OptionUI.activeSelf)
         {
-            SpawnOptionUI = Instantiate(OptionUI);
+            OptionUI.SetActive(true);
         }
-        else 
-        {
-            if (!SpawnOptionUI.activeSelf)
-            {
-                SpawnOptionUI.SetActive(true);
-            }
-        }
-    }
-    public void OnClickMoveRight()
-    {
-        Debug.Log("MoveRight Click!");
-    }
-    public void OnClickMoveLeft()
-    {
-        Debug.Log("MoveLeft Click!");
     }
 
     public void OnClickExit()

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityEngine.UI;
 using ExitGames.Client.Photon.StructWrapping;
 
-public class TitleGameManagerScript : MonoBehaviourPunCallbacks
+public class TitleGameManagerScript : GameManager
 {
-    // Start is called before the first frame update
     public enum eStep
     {
         Title,
@@ -18,72 +17,46 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
         Loading,
         InGame
     }
-    public enum eSkinColor
-    {
-        Red,
-        Yellow,
-        Purple,
-        Blue,
-        Green,
-        White
-    }
 
     private eStep gamestep = eStep.Title;
-    private eSkinColor SkinColor;
-
+    public GameObject[] TitleHUD;
     public GameObject LobbyCharacter;
-    public GameObject LobbyUI;
     public GameObject LoadingCharacter;
-    public GameObject LoadingUI;
-    public GameObject TitleImage;
-    private Renderer CharacterRender;
-    private GameObject SpawnLobbyCharacter = null;
-    private GameObject SpawnLobbyUI = null;
-    private GameObject SpawnLoadingCharacter = null;
-    private GameObject SpawnLoadingUI = null;
-    private int MaxClientCount = 3;
-    private float GameStartTimer = 0.0f;
-    private bool IsStartGame = false;
+
+    private int MaxClientCount = 1;
     private string UserName;
 
-    public Vector3 LobbyCharacterSpawnPosition;
-    public Vector3 LoadingCharacterSpawnPosition;
+
     void Start()
     {
         if (!PhotonNetwork.IsConnected)
         {
-            PhotonNetwork.ConnectUsingSettings();
-            GameObject SpawnTitleImage = Instantiate(TitleImage);
-            TitleUIScript TitleUIScr = SpawnTitleImage.GetComponent<TitleUIScript>();
-            TitleUIScr.GameManager = gameObject;
+            StartCoroutine(ConnectToPhotonMasterServer());
+            TitleHUD[(int)eStep.Title].SetActive(true);
         }
         else
         {
-            ExitGames.Client.Photon.Hashtable properties = PhotonNetwork.LocalPlayer.CustomProperties;
-            properties.TryGetValue("Skin", out SkinColor);
+            base.LoadSkin();
             gamestep = eStep.Lobby;
             PlayGameLogic();
         }
     }
 
-    public override void OnConnectedToMaster()
-    {
-    }
-    public override void OnDisconnected(DisconnectCause cause)
-    {
-    }
-    void Update()
+    IEnumerator ConnectToPhotonMasterServer()
     {
 
-        if (!PhotonNetwork.IsConnected)
+        for(int i = 0; i < 5; i++) 
         {
-            Start();
+           PhotonNetwork.ConnectUsingSettings();
+
+           yield return new WaitForSeconds(1f);
+
+            if (PhotonNetwork.IsConnected)            
+            {
+                yield break;
+            }
         }
 
-        if (IsStartGame)
-        {
-            StartGame();
-        }
     }
 
     public void PlayGameLogic()
@@ -95,31 +68,30 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
 
             case eStep.Lobby:
                 JoinLobby();
-                SpawnLobbyCharacter = Instantiate(LobbyCharacter, LobbyCharacterSpawnPosition, transform.rotation);
-                SpawnLobbyUI = Instantiate(LobbyUI);
+                LobbyCharacter.SetActive(true);
+                TitleHUD[(int)eStep.Lobby].SetActive(true);
+                base.SetCharacterRender(LobbyCharacter);
 
-                SetCharacterRender(SpawnLobbyCharacter);
-                ChangeSkin();
-
-                LobbyUIScript LobbyUIScr = SpawnLobbyUI.GetComponent<LobbyUIScript>();
-                SpawnLobbyUI.GetComponent<LobbyUIScript>().TitleGameManager = gameObject;
+                LobbyUIScript LobbyUIScr = TitleHUD[(int)eStep.Lobby].GetComponent<LobbyUIScript>();
                 LobbyUIScr.LoadName();
+
                 break;
 
             case eStep.Loading:
-                Destroy(SpawnLobbyCharacter);
-                Destroy(SpawnLobbyUI);
+                LobbyCharacter.SetActive(false);
+                TitleHUD[(int)eStep.Lobby].SetActive(false);
 
-                SpawnLoadingCharacter = Instantiate(LoadingCharacter, LoadingCharacterSpawnPosition, transform.rotation);
-                SpawnLoadingUI = Instantiate(LoadingUI);
-                SetCharacterRender(SpawnLoadingCharacter);
+                LoadingCharacter.SetActive(true);
+                TitleHUD[(int)eStep.Loading].SetActive(true);
+
+                base.SetCharacterRender(LoadingCharacter);
                 JoinGameRoom();
+
                 break;
 
             case eStep.InGame:
-                Debug.Log("InGameStep Start");
                 SaveUserData();
-                IsStartGame = true;
+                StartCoroutine(StartGame());
                 break;
 
             default:
@@ -133,17 +105,12 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
         PlayGameLogic();
     }
 
-    private void JoinLobby()
+    void JoinLobby()
     {
         PhotonNetwork.JoinLobby();
     }
 
-    public override void OnJoinedLobby()
-    {
-        base.OnJoinedLobby();
-    }
-
-    private void JoinGameRoom()
+    void JoinGameRoom()
     {
         PhotonNetwork.JoinOrCreateRoom("RoomOne", new RoomOptions { MaxPlayers = MaxClientCount }, null);
     }
@@ -160,24 +127,19 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
         UpdatePlayerUI();
     }
 
-    private void StartGame()
+    public IEnumerator StartGame()
     {
-
-        GameStartTimer += Time.deltaTime;
-
-        if (GameStartTimer > 8.0f)
-        {
-            SceneManager.LoadScene("PlayScene");
-        }
-
+        yield return new WaitForSeconds(8.0f);
+        SceneManager.LoadScene("PlayScene");
     }
 
     private void UpdatePlayerUI()
     {
-        if (SpawnLoadingUI != null)
+        if (TitleHUD[(int)eStep.Loading].activeSelf)
         {
 
-            Text[] texts = SpawnLoadingUI.GetComponentsInChildren<Text>();
+            Text[] texts = TitleHUD[(int)eStep.Loading].GetComponentsInChildren<Text>();
+
             if (texts.Length > 0)
             {
                 foreach (Text text in texts)
@@ -208,10 +170,9 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
         UpdatePlayerUI();
     }
 
-    void SaveUserData() 
+    void SaveUserData()
     {
         ResetUserData();
-
         ExitGames.Client.Photon.Hashtable customProperties = PhotonNetwork.LocalPlayer.CustomProperties;
 
         if (customProperties.ContainsKey("Skin"))
@@ -227,56 +188,19 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
         }
     }
 
-    public void SetUserName(string NewName) 
+    public void SetUserName(string NewName)
     {
         UserName = NewName;
         PhotonNetwork.NickName = UserName;
     }
 
-    public void SetNewSkin(eSkinColor NewColor) 
+    public void SetNewSkin(eSkinColor NewColor)
     {
         SkinColor = NewColor;
-        ChangeSkin();
+        base.ChangeSkin();
     }
 
-    private void ChangeSkin() 
-    {
-        Debug.Log("Chanage Color is " + SkinColor);
-
-        switch (SkinColor) 
-        {
-
-            case eSkinColor.Red:
-                CharacterRender.material.color = Color.red;
-                break;
-            case eSkinColor.Yellow:
-                CharacterRender.material.color = Color.yellow;
-                break;
-            case eSkinColor.Purple:
-                CharacterRender.material.color = new Color(255, 0, 255);
-                break;
-            case eSkinColor.Blue:
-                CharacterRender.material.color = Color.blue;
-                break;
-            case eSkinColor.Green:
-                CharacterRender.material.color = Color.green;
-                break;
-            case eSkinColor.White:
-                CharacterRender.material.color = Color.white;
-                break;
-            default:
-                break;
-
-        }
-    }
-
-    void SetCharacterRender(GameObject NewCharacter) 
-    {
-        CharacterRender = NewCharacter.GetComponent<GetCharacterRenderScript>().GetRender();
-        ChangeSkin();
-    }
-
-    void ResetUserData() 
+    void ResetUserData()
     {
         ExitGames.Client.Photon.Hashtable customProperties = PhotonNetwork.LocalPlayer.CustomProperties;
 
@@ -286,5 +210,7 @@ public class TitleGameManagerScript : MonoBehaviourPunCallbacks
             PhotonNetwork.LocalPlayer.SetCustomProperties(customProperties);
         }
     }
+
+    
 
 }

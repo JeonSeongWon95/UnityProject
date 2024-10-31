@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 7673123999063867099}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PV: {fileID: 3936345231109801323}
   PlayerName: {fileID: 3552833278198581487}
-  CharacterRender: {fileID: 901957204388780203}
 --- !u!1 &1693065661448932010
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +704,9 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 628573168770686744, guid: a6dc591d736d5d54ab25295150b7372e, type: 3}
+    - {fileID: 8064971028664772780, guid: a6dc591d736d5d54ab25295150b7372e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3663633299517103302, guid: a6dc591d736d5d54ab25295150b7372e, type: 3}
       insertIndex: -1

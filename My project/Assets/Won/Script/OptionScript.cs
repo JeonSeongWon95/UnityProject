@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,13 +11,18 @@ public class OptionScript : MonoBehaviour
     public int ResolutionData;
     private Resolution[] resolutions;
     private bool IsFullScreen = false;
-    void Start()
+    void Awake()
     {
         Resolution_DropDown.ClearOptions();
         resolutions = Screen.resolutions;
 
         foreach (Resolution resolution in resolutions)
         {
+            float refreshRateValue = Convert.ToSingle(resolution.refreshRateRatio);
+
+            if (refreshRateValue != 60.0f)
+                continue;
+
             Dropdown.OptionData Data = new Dropdown.OptionData();
             Data.text = resolution.width + " X " + resolution.height;
             Resolution_DropDown.options.Add(Data);
@@ -29,20 +35,14 @@ public class OptionScript : MonoBehaviour
 
         RefreshDropDown();
     }
-    void Update()
-    {
-        
-    }
 
     public void GetResolutionData(int Index) 
     {
-        Debug.Log("Present Resolution Data : " + Index);
         ResolutionData = Index;
     }
 
     public void ChangeResolution() 
     {
-        Debug.Log("Resolution is " + resolutions[ResolutionData].width + " X " + resolutions[ResolutionData].height + IsFullScreen);
         Screen.SetResolution(resolutions[ResolutionData].width, resolutions[ResolutionData].height, IsFullScreen);
     }
 
@@ -53,7 +53,6 @@ public class OptionScript : MonoBehaviour
 
     public void SetIsFullScreen(bool NewValue) 
     {
-        Debug.Log("Chanager IsFullScreen : " + NewValue);
         IsFullScreen = NewValue;
     }
 

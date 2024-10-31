@@ -6,19 +6,8 @@ using UnityEngine.UI;
 
 public class TitleUIScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public InputField InputField_Name = null;
-    public GameObject GameManager = null;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public InputField InputField_Name;
+    public TitleGameManagerScript TitleGameManagerScr;
 
     public void OnClickConnectButton() 
     {
@@ -27,14 +16,13 @@ public class TitleUIScript : MonoBehaviour
 
         if(InputField_Name.text.Length > 0) 
         {
-            if (GameManager == null)
+            if (TitleGameManagerScr == null)
                 return;
 
-            TitleGameManagerScript TitleGameManagerScr = GameManager.GetComponent<TitleGameManagerScript>();
             TitleGameManagerScr.SetUserName(InputField_Name.text);
             TitleGameManagerScr.NextStep();
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
     }

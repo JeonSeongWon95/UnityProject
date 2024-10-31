@@ -17,7 +17,6 @@ public class SocketScript : MonoBehaviour
     {
         if (ConnectServer())
         {
-            Debug.Log("Connect Chat Server");
             isConnected = true;
             ReceiveMessage();
         }
@@ -28,7 +27,6 @@ public class SocketScript : MonoBehaviour
         {
             if (ConnectServer())
             {
-                Debug.Log("Connected to chat server.");
                 isConnected = true;
                 ReceiveMessage();
             }
@@ -36,7 +34,7 @@ public class SocketScript : MonoBehaviour
 
     }
 
-    private bool ConnectServer()
+    bool ConnectServer()
     {
         Int32 port = 7777;
         string host = "127.0.0.1";
@@ -62,14 +60,13 @@ public class SocketScript : MonoBehaviour
         try
         {
             await stream.WriteAsync(dataToSend, 0, dataToSend.Length);
-            Debug.Log("Message sent successfully.");
         }
         catch (Exception ex)
         {
             Debug.LogError($"Error sending message: {ex.Message}");
         }
     }
-    private async void ReceiveMessage()
+    async void ReceiveMessage()
     {
         byte[] Buffer = new byte[1024];
 

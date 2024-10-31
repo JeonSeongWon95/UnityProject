@@ -2,34 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using ExitGames.Client.Photon.StructWrapping;
+using System;
 using Photon.Pun;
 using Photon.Realtime;
-using ExitGames.Client.Photon.StructWrapping;
-using Photon.Chat.Demo;
-using System;
 
-public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
+public class PlaySceneGameManagerScript : GameManager
 {
-    public bool IsGameEnd = false;
     public Vector3 GoalPosition;
     public GameObject GameEndUI;
     public GameObject ChatUI;
-    public GameObject CountDownUI;
+    public CountDownScript CountDownUIScr;
     public SocketScript SocketScr;
     public Transform[] SpawnPosition;
     public int Count = 5;
+    public PhotonView PV;
 
-    private float GameEndTimer = 0.0f;
     private float GameStartTimer = 0.0f;
     private GameObject Player;
     private bool IsGameStart = false;
-    private GameObject SpawnChatUI;
-    private CountDownScript CountDownUIScr;
     private ChatUIScript ChatUIScr;
-    void Start()
+    void Awake()
     {
         SpawnAndSetLocalPlayer();
-        CountDownUIScr = Instantiate(CountDownUI).GetComponent<CountDownScript>();
 
         if (PhotonNetwork.IsMasterClient)
         {
@@ -47,39 +42,34 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
 
                 if (GameStartTimer >= 1.0f)
                 {
-                    photonView.RPC("CountDown", Photon.Pun.RpcTarget.All);
+                    photonView.RPC("RPC_CountDown", Photon.Pun.RpcTarget.All);
                     GameStartTimer = 0;
                 }
             }
+
             if (Count == 0)
             {
-                photonView.RPC("GameStart", Photon.Pun.RpcTarget.All);
+                photonView.RPC("RPC_GameStart", Photon.Pun.RpcTarget.All);
             }
-        }
 
-
-        if (IsGameEnd)
-        {
-            GameEndTimer += Time.deltaTime;
-            Instantiate(GameEndUI);
-
-            if (GameEndTimer > 5.0f)
-            {
-                Debug.Log("GameEnd");
-                GameEndTimer = 0.0f;
-                SceneManager.LoadScene("EndScene");
-            }
         }
     }
 
-    [PunRPC]
-    public void EndGame()
+    IEnumerator EndGame() 
     {
-        IsGameEnd = true;
+        GameEndUI.SetActive(true);
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene("EndScene");
     }
 
     [PunRPC]
-    public void CountDown()
+    public void RPC_EndGame()
+    {
+        StartCoroutine(EndGame());
+    }
+
+    [PunRPC]
+    public void RPC_CountDown()
     {
         Count -= 1;
         CountDownUIScr.ChangeNumber(Count);
@@ -91,7 +81,7 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void GameStart() 
+    public void RPC_GameStart() 
     {
         CountDownUIScr.gameObject.SetActive(false);
     }
@@ -100,12 +90,15 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
     {
         Transform SpawnTransform = SpawnPosition[UnityEngine.Random.Range(0, SpawnPosition.Length)];
         Player = PhotonNetwork.Instantiate("Player", SpawnTransform.position, Quaternion.Euler(0, 90, 0));
-        SpawnChatUI = Instantiate(ChatUI);
+
+        base.SetCharacterRender(Player);
+        base.LoadSkin();
+        base.ChangeSkin();
+
+        ChatUI.SetActive(true);
         PlayerScript PlayerScr = Player.GetComponent<PlayerScript>();
-        ChatUIScr = SpawnChatUI.GetComponent<ChatUIScript>();
-        ChatUIScr.SetSocketScript(SocketScr);
+        ChatUIScr = ChatUI.GetComponent<ChatUIScript>();
         ChatUIScr.SetPlayerScript(PlayerScr);
-        SocketScr.SetChatUI(ChatUIScr);
         PlayerScr.enabled = true;
         PlayerScr.LocalPlayerSet();
     }
@@ -115,6 +108,23 @@ public class PlaySceneGameManagerScript : MonoBehaviourPunCallbacks
         return IsGameStart;
     }
 
-    
+    void SetCharacterSkin()
+    {
+        ExitGames.Client.Photon.Hashtable properties;
+
+        if (PV.IsMine)
+        {
+            properties = PhotonNetwork.LocalPlayer.CustomProperties;
+        }
+        else
+        {
+            properties = PV.Owner.CustomProperties;
+        }
+
+        properties.TryGetValue("Skin", out SkinColor);
+        ChangeSkin();
+    }
+
+
 
 }

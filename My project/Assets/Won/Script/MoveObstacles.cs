@@ -16,40 +16,46 @@ public class MoveObstacles : MonoBehaviour
 
     void Start()
     {
-        switch (Dir)
+        dir = (Direction)Dir;
+    }
+
+
+    void FixedUpdate()
+    {
+        Vector3 Rot = dir == Direction.Left ? Vector3.up : Vector3.down;
+        transform.Translate(Rot * Speed * Time.fixedDeltaTime);       
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Obstacle")
         {
-            case 0:
+            if (dir == Direction.Right)
+            {
                 dir = Direction.Left;
-                break;
-            case 1:
+            }
+            else
+            {
                 dir = Direction.Right;
-                break;
+            }
         }
-    }
-
-
-    void Update()
-    {
-        if (dir == Direction.Left)
+        else if (collision.gameObject.tag == "Player")
         {
-            transform.Translate(Vector3.up * Speed * Time.deltaTime);
-        }
-        else if (dir == Direction.Right)
-        {
-            transform.Translate(Vector3.down * Speed * Time.deltaTime);
-        }
+            Transform PlayerTransform = collision.gameObject.transform;
 
-    }
+            if (PlayerTransform == null)
+                return;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Obstacle" && dir == Direction.Right)
-        {
-            dir = Direction.Left;
-        }
-        else if (collision.gameObject.tag == "Obstacle" && dir == Direction.Left)
-        {
-            dir = Direction.Right;
+            Rigidbody PlayerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+
+            if (PlayerRigidbody == null)
+                return;
+
+            Vector3 Direction = PlayerTransform.position - transform.position;
+            Direction.y = 0;
+            Direction.Normalize();
+
+            PlayerRigidbody.AddForce(Direction * 5.0f, ForceMode.Impulse);
         }
     }
 }

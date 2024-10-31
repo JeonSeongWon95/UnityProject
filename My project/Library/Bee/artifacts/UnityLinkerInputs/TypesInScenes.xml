@@ -21,7 +21,6 @@
 		<type fullname="LobbyUIScript" preserve="nothing"/>
 		<type fullname="LookAtCameraScript" preserve="nothing"/>
 		<type fullname="MoveObstacles" preserve="nothing"/>
-		<type fullname="ObstaclesScriipt" preserve="nothing"/>
 		<type fullname="OptionScript" preserve="nothing"/>
 		<type fullname="PlayerScript" preserve="nothing"/>
 		<type fullname="PlaySceneGameManagerScript" preserve="nothing"/>
